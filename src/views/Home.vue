@@ -1,17 +1,13 @@
 <template>
   <div>
-    <div class="card">
-
-    </div>
-    <div class="my-3">
-      <select v-model="selectedFilterValue">
+      <select class="form-control" v-model="selectedFilterValue">
         <template v-for="status in Object.keys(STATUSSES)">
           <option :value="STATUSSES[status].VALUE">
             {{ STATUSSES[status].TEXT }}
           </option>
         </template>
       </select>
-    </div>
+
 
     <div  v-if="!filteredItems.length"
           class="text-center alert alert-danger mt-2">

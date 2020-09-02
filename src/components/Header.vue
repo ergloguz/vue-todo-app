@@ -6,7 +6,7 @@
 
     <router-link to="/add-new">
       <div class="custom-add">
-        <a class="custom-add-text" href="">Add New Todo</a>
+        <a class="custom-add-text" href="">Add  Todo</a>
       </div>
     </router-link>
     </Container>
