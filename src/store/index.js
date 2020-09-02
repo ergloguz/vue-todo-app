@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
-  key: 'library-app'
+  key: 'todo-app'
 })
 
 

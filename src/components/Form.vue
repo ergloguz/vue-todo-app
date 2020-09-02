@@ -6,7 +6,7 @@
 
         <div class="table mx-auto" >
           <div class="table-head">
-            <a class="table-head-day">ADD NEW TODO</a>
+            <a class="table-head-mark">ADD NEW TODO</a>
           </div>
 
           <div class="group mt-4">
@@ -109,7 +109,7 @@ export default {
   margin-top: 20px;
   display: flex;
   border-radius: 2px;
-  background-color: #131b23;
+  background-color: rgba(var(--dark));
   min-height: 500px;
   align-items: center;
   flex-direction: column;
@@ -120,12 +120,12 @@ export default {
     width: 200px;
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color:#1b262c;
-    color:#2DCAD2;
+    background-color:rgba(var(--gray));
+    color: rgb(var(--blue));
     font-size: 22px;
     &:hover{
-      background-color:#2DCAD2;
-      color:#1b262c;
+      background-color:rgb(var(--blue));
+      color:rgba(var(--dark));
       cursor:pointer;
     }
   }
@@ -133,53 +133,13 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    &-day {
+    &-mark {
       font-family: saira;
       font-size: 38px;
-      color: white;
+      color: rgb(var(--trans));
       margin-top: 20px;
       text-decoration: none;
     }
-    &-degree {
-      font-size: 120px;
-      font-family: saira;
-      color: #2dcad2;
-      text-decoration: none;
-    }
-  }
-  &-date {
-    display: flex;
-    flex-direction: row;
-    &-day {
-      font-family: saira;
-      font-size: 38px;
-      color: white;
-      text-decoration: none;
-    }
-    &-month {
-      text-decoration: none;
-      color: white;
-      font-size: 38px;
-      font-family: saira;
-    }
-    &-year {
-      text-decoration: none;
-      color: white;
-      font-size: 38px;
-      font-family: saira;
-      margin-top: 50px;
-    }
-  }
-  &-country {
-    text-decoration: none;
-    color: white;
-    font-size: 22px;
-    font-family: saira;
-  }
-  &-status {
-    font-size: 25px;
-    font-family: saira;
-    color: #2dcad2;
   }
 }
 .group {
@@ -187,10 +147,10 @@ export default {
   &-label{
     font-size: 22px;
     font-family: saira;
-    color: #2DCAD2;
+    color:rgb(var(--blue));
   }
   &-error{
-    color: red;
+    color: rgb(var(--red));
     font-size: 20px;
     text-decoration: none;
   }

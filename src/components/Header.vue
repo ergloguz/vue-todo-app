@@ -1,6 +1,6 @@
 <template>
 
-  <nav class="navbar custom">
+  <nav class="navbar custom mt-2">
     <Container>
     <a class="custom-title" >ONE ONE TODO APP</a>
 
@@ -24,26 +24,26 @@ export default {
 
 <style scoped>
 .custom{
-  background-color:#E7EAF2;
-  border-color: #1b262c;
+  background-color:rgba(var(--trans));
+
   &-add{
     display: flex;
     height: 40px;
     width: 120px;
-    background-color: #2DCAD2;
+    background-color: rgba(var(--blue));
     align-items: center;
     justify-content: center;
     border-radius: 2px;
     &-text {
       font-size: 22px;
-      color: #1B262C;
+      color: rgba(var(--dark));
 
     }
   }
 
   &-title {
     font-size: 28px;
-    color: #1B262C;
+    color: rgba(var(--dark));
 
   }
 }

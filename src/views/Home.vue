@@ -14,16 +14,17 @@
     </div>
 
     <div  v-if="!filteredItems.length"
-          class="text-center alert alert-info mt-2">
-      No Data
+          class="text-center alert alert-danger mt-2">
+      Oops! Your List is Empty
     </div>
 
-    <Card v-else
-              v-for="item in filteredItems" :key="item.index"
-              :index="item.index"
-              :title="item.title"
-              :detail="item.detail"
-              :status="item.status"
+    <Card
+        v-else
+        v-for="item in filteredItems" :key="item.index"
+        :index="item.index"
+        :title="item.title"
+        :detail="item.detail"
+        :status="item.status"
     />
   </div>
 </template>
@@ -58,9 +59,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.card {
-
-}
-</style>

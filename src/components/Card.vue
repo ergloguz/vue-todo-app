@@ -3,13 +3,13 @@
     <div class=" base row">
       <div class="status" :class="colorArray[status]">
       </div>
-      <div class="col base-book">
-        <a class="base-book-bookName">{{title}}</a>
-        <a class="base-book-bookAuthor" >{{detail}}</a>
+      <div class="col base-todo">
+        <a class="base-book-title">{{title}}</a>
+        <a class="base-book-detail" >{{detail}}</a>
       </div>
 
       <div class="col ">
-        <button  class="button "   @click="gotoUpdate">
+        <button  class="button"   @click="gotoUpdate">
           <a>Edit</a>
         </button>
       </div>
@@ -48,7 +48,7 @@ export default {
 <style scoped>
 .base {
   display: flex;
-  background-color: #131B23;
+  background-color: rgb(var(--dark));
   height: 150px;
   align-items: center;
   margin-top: 20px;
@@ -56,16 +56,16 @@ export default {
     height: 120px;
     width: 90px;
   }
-  &-book {
+  &-todo{
     display: flex;
     flex-direction: column;
     font-size: 22px;
     margin-left: 20px;
-    &-bookName{
-      color: white;
+    &-title{
+      color: rgb(var(--trans));
     }
-    &-bookAuthor {
-      color: #2DCAD2;
+    &-detail {
+      color: rgb(var(--blue));
     }
   }
 }
@@ -78,13 +78,13 @@ export default {
   width: 120px;
   margin-top: 10px;
   margin-bottom: 20px;
-  background-color:#1b262c;
-  color:#2DCAD2;
+  background-color:rgb(var(--gray));
+  color:rgb(var(--blue));
   font-size: 22px;
   float: right;
   &:hover{
-    background-color:#2DCAD2;
-    color:#1b262c;
+    background-color:rgba(var(--blue));
+    color:rgba(var(--blue));
     cursor:pointer;
   }
 }

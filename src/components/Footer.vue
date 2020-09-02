@@ -15,12 +15,12 @@ export default {
 <style scoped>
 .navbar-custom{
   display: flex;
-  background-color:#1B262C;
+  background-color:rgba(var(--dark));
   height: 60px;
   align-items: center;
   justify-content: center;
   &-text{
-    color: white;
+    color: rgba(var(--trans));
     font-size: 22px;
     font-family: saira;
   }
