@@ -2,7 +2,7 @@
 
   <nav class="navbar custom mt-2">
     <Container>
-    <a class="custom-title" >ONE ONE TODO APP</a>
+    <a class="custom-title" >SUPER TODOS</a>
 
     <router-link to="/add-new">
       <div class="custom-add">
