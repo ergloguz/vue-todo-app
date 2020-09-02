@@ -1,18 +1,66 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div class="card">
+
+    </div>
+    <div class="my-3">
+      <select v-model="selectedFilterValue">
+        <template v-for="status in Object.keys(STATUSSES)">
+          <option :value="STATUSSES[status].VALUE">
+            {{ STATUSSES[status].TEXT }}
+          </option>
+        </template>
+      </select>
+    </div>
+
+    <div  v-if="!filteredItems.length"
+          class="text-center alert alert-info mt-2">
+      No Data
+    </div>
+
+    <Card v-else
+              v-for="item in filteredItems" :key="item.index"
+              :index="item.index"
+              :title="item.title"
+              :detail="item.detail"
+              :status="item.status"
+    />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import {STATUSSES} from '../statuses';
 
+import Card from "@/components/Card";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
+    Card,
+
+  },
+  data() {
+    return {
+      STATUSSES,
+      selectedFilterValue: STATUSSES.ALL.VALUE
+    }
+  },
+  computed: {
+    getTodoList() {
+      return this.$store.getters.getTodoList;
+    },
+    filteredItems() {
+      if (this.selectedFilterValue === STATUSSES.ALL.VALUE) {
+        return this.getTodoList;
+      } else {
+        return this.getTodoList.filter((item) => item.status == this.selectedFilterValue);
+      }
+    }
   }
 }
 </script>
+
+<style scoped>
+.card {
+
+}
+</style>
