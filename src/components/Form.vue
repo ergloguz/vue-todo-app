@@ -134,7 +134,6 @@ export default {
     flex-direction: column;
     align-items: center;
     &-mark {
-      font-family: saira;
       font-size: 38px;
       color: rgb(var(--trans));
       margin-top: 20px;
@@ -146,7 +145,6 @@ export default {
   margin-top: auto;
   &-label{
     font-size: 22px;
-    font-family: saira;
     color:rgb(var(--blue));
   }
   &-error{

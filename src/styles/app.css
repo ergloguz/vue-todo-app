@@ -9,15 +9,15 @@
 body{
     background-color:rgb(var(--trans));
     color: inherit;
+    font-family: saira;
 }
 
 a {
-    font-family: saira;
     text-decoration: none;
-    color: white ;
+    color: rgb(var(--white)) ;
 }
 
 a:hover{
     text-decoration: none;
-    color: white;
+    color: rgb(var(--white));
 }

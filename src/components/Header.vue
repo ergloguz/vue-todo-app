@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Container from "@/components/Container";
+import Container from "../components/Container";
 export default {
   name:"Header",
   components: {Container}

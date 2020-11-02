@@ -22,7 +22,7 @@ export default {
   &-text{
     color: rgba(var(--trans));
     font-size: 22px;
-    font-family: saira;
+
   }
 }
 </style>
